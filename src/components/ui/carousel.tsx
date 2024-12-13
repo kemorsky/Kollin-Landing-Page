@@ -28,6 +28,8 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
+  selectedIndex: number
+  scrollTo: (index: number) => void
 } & CarouselProps
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
@@ -67,6 +69,7 @@ const Carousel = React.forwardRef<
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
     const [canScrollNext, setCanScrollNext] = React.useState(false)
+    const [selectedIndex, setSelectedIndex] = React.useState(0)
 
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
@@ -75,6 +78,7 @@ const Carousel = React.forwardRef<
 
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
+      setSelectedIndex(api.selectedScrollSnap())
     }, [])
 
     const scrollPrev = React.useCallback(() => {
@@ -96,6 +100,13 @@ const Carousel = React.forwardRef<
         }
       },
       [scrollPrev, scrollNext]
+    )
+
+    const scrollTo = React.useCallback(
+      (index: number) => {
+        api?.scrollTo(index)
+      },
+      [api],
     )
 
     React.useEffect(() => {
@@ -132,6 +143,8 @@ const Carousel = React.forwardRef<
           scrollNext,
           canScrollPrev,
           canScrollNext,
+          selectedIndex,
+          scrollTo,
         }}
       >
         <div
@@ -193,6 +206,40 @@ const CarouselItem = React.forwardRef<
   )
 })
 CarouselItem.displayName = "CarouselItem"
+
+const CarouselDots = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+  const { selectedIndex, scrollTo, api } = useCarousel()
+  console.log(selectedIndex)
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        'embla__dots z-50 mb-4 flex items-center justify-center gap-1',
+        className,
+      )}
+      {...props}
+    >
+      {api
+        ?.scrollSnapList()
+        .map((_, index) => (
+          <Button
+            key={index}
+            className={cn(
+              'embla__dot h-[4px] w-[100px] p-0',
+              index === selectedIndex
+                ? 'embla__dot--selected '
+                : 'bg-primary-foreground',
+            )}
+            onClick={() => scrollTo(index)}
+          />
+        ))}
+    </div>
+  )
+})
+CarouselDots.displayName = 'CarouselDots'
 
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
@@ -257,6 +304,7 @@ export {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselDots,
   CarouselPrevious,
   CarouselNext,
 }

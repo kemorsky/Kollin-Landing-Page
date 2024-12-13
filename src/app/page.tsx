@@ -1,8 +1,6 @@
 import { MainNav } from "@/components/ui/header";
 import { Footer } from "@/components/ui/footer";
 
-import Image from "next/image";
-
 import Hero from "@/components/Hero";
 import WhatWeDo from "@/components/WhatWeDo";
 import Stats from "@/components/Stats";
@@ -15,8 +13,8 @@ import Courses from "@/components/Courses";
 
 export default function Home() {
   return (
-    <div className="xl:w-[80rem] m-auto bg-blue-900">
-      <main className="flex flex-col items-center justify-center gap-2 bg-green-200">
+    <div className="xl:w-[80rem] bg-slate-100 m-auto scroll-smooth">
+      <main className="flex flex-col items-center justify-center gap-28">
         <MainNav />
         <Hero />
         <WhatWeDo />

@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
+import { poppins } from "@/app/fonts/fonts"
 
 import { cn } from "@/lib/utils"
 
@@ -10,19 +11,19 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-sky-500 px-4 py-2 text-primary-foreground shadow hover:bg-sky-600 transform duration-200",
+          `{${poppins.variable}} font-semibold bg-sky-600 text-primary-foreground shadow hover:bg-sky-700 transform duration-200 text-[1rem]`,
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
           "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
+          `{${poppins.variable}} font-semibold bg-gray-100 hover:bg-gray-200 border border-blue-500 text-blue-600 shadow-sm transform duration-200 text-[1rem]`,
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        plus: ""
+        testimonies: "h-4 w-4 bg-none text-blue-400"
       },
       size: {
-        default: "h-9 px-4 py-2",
+        default: "h-12 px-6 py-3",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
         icon: "h-9 w-9",

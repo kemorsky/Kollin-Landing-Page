@@ -6,7 +6,7 @@ const PriceBox = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivEl
     <div
         ref={ref}
         className={cn(
-            "flex items-center border border-blue-400 h-[20rem] w-[20rem]",
+            "flex items-center border border-blue-400 h-[18rem] w-[18rem]",
             className
         )}
         {...props}
@@ -19,7 +19,7 @@ const PriceBoxName = React.forwardRef<HTMLHeadingElement, React.HTMLAttributes<H
     <h1 
     ref={ref}
     className={cn(
-        "text-3xl uppercase font-semibold",
+        "text-[2rem] uppercase font-semibold",
         className
     )}
     {...props}/>
@@ -31,7 +31,7 @@ const PriceBoxPricing = React.forwardRef<HTMLParagraphElement, React.HTMLAttribu
     <p 
     ref={ref}
     className={cn(
-        "text-2xl font-semibold tracking-wider",
+        "text-[1rem] font-semibold tracking-normal",
         className
     )}
     {...props}/>
@@ -43,7 +43,7 @@ const PriceBoxLeft = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLD
     <div
         ref={ref}
         className={cn(
-            "bg-blue-400 flex flex-col justify-between items-start text-white h-[20rem] w-[10rem] p-2",
+            "bg-blue-400 flex flex-col justify-between items-start text-white h-full w-[8rem] p-2",
             className
         )}
         {...props}
@@ -56,7 +56,7 @@ const PriceBoxRight = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTML
     <div
         ref={ref}
         className={cn(
-            "bg-white text-black flex flex-col justify-between items-start h-[20rem] w-[10rem] px-4 py-2",
+            "bg-white text-black flex flex-col justify-between items-start h-full w-[10rem] px-4 py-2",
             className
         )}
         {...props}
