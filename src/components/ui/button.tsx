@@ -11,13 +11,13 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          `{${poppins.variable}} font-semibold bg-sky-600 text-primary-foreground shadow hover:bg-sky-700 transform duration-200 text-[1rem]`,
+          `{${poppins.variable}} font-semibold bg-sky-600 text-primary-foreground shadow hover:bg-sky-700 transform duration-200 w-full text-[0.8rem] xl:text-[1rem]`,
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
           "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
         secondary:
-          `{${poppins.variable}} font-semibold bg-gray-100 hover:bg-gray-200 border border-blue-500 text-blue-600 shadow-sm transform duration-200 text-[1rem]`,
+          `{${poppins.variable}} font-semibold bg-gray-100 hover:bg-gray-200 border border-blue-500 text-blue-600 shadow-sm transform duration-200 w-full text-[0.8rem] xl:text-[1rem]`,
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         testimonies: "h-4 w-4 bg-none text-blue-400"

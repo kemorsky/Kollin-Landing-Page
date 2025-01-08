@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
   	extend: {
+		fontSize: {
+			headerClamp: "clamp(1.875rem, 2.25rem, 3rem)",
+		  },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
