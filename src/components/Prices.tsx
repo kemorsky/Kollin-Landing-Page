@@ -15,8 +15,8 @@ import * as React from "react";
 export default function Prices() {
     return (
         <div className='w-[90%] '>
-            <h1 className={`${poppins.className} text-4xl py-8 px-16 text-center font-semibold`}>Lär dig som ett proffs. Betala som en student.</h1>
-            <div className='flex items-center justify-around'>
+            <h1 className={`${poppins.className} text-4xl py-8 px-16 text-center font-semibold intersect-once intersect:motion-opacity-in-0 intersect:motion-translate-y-in-[-100%]`}>Lär dig som ett proffs. Betala som en student.</h1>
+            <div className='flex items-center justify-around intersect-once intersect:motion-preset-expand '>
                 <PriceBox>
                     <PriceBoxLeft>
                         <PriceBoxName className={`${openSans.className} text-white`}>gratis</PriceBoxName>

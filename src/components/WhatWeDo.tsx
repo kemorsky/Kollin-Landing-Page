@@ -28,7 +28,7 @@ import School5 from "../app/assets/universitets/7_006.webp"
 
 export default function WhatWeDo() {
     return (
-        <div className="p-4 xl:w-[80rem] animate-appear">
+        <div className="p-4 xl:w-[80rem] intersect-once intersect:motion-opacity-in-0 intersect:motion-translate-y-in-100">
             <div className="flex flex-col items-center justify-center gap-12">
                 <section className="flex items-center justify-around w-full p-4">
                     <Carousel className="w-[30rem]"

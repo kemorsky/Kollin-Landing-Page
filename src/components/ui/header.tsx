@@ -57,7 +57,7 @@ export function MainNav() {
         </div>
      </div>
             {isOpen && (
-                <nav className="flex basis-full flex-col items-start gap-4 text-sm xl:gap-6 absolute top-10 right-0 bg-red-600 p-2 rounded-lg">
+                <nav className="flex basis-full w-[10rem] flex-col items-start gap-4 text-sm xl:gap-6 absolute top-10 right-0 bg-red-600 p-2 rounded-lg">
                     <span className="cursor-pointer hover:text-blue-300 text-[1rem]">Plattformen</span>
                     <span className="cursor-pointer hover:text-blue-300 text-[1rem]">Priser</span>
                     <span className="cursor-pointer hover:text-blue-300 text-[1rem]">Kurser</span>

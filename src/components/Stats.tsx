@@ -8,7 +8,7 @@ import { poppins, openSans } from "@/app/fonts/fonts";
 
 export default function Stats() {
     return (
-        <div className="flex flex-col items-center justify-center w-full gap-y-8">
+        <div className="flex flex-col items-center justify-center w-full gap-y-8 intersect-once intersect:motion-opacity-in-0 intersect:motion-translate-y-in-100">
             <h1 className={`${poppins.className} text-4xl font-semibold`}>Upptäck kraften i kollektiv intelligens</h1>
             <div className="flex items-center justify-around w-[85%]">
                 <Card className="w-[14rem] bg-blue-200 bg-opacity-70">

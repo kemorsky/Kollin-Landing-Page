@@ -8,7 +8,7 @@ import CoreFeaturesImage from '../app/assets/core-features-photo.jpg'
 export default function Features() {
     return (
         <div className="flex justify-around px-10">
-            <section className="w-[50%] gap-4">
+            <section className="w-[50%] gap-4 intersect-once intersect:motion-opacity-in-0 intersect:motion-translate-x-in-[-100%]">
                 <h1 className={`${poppins.className} text-4xl mb-4 font-semibold`}>Nyckelfunktioner</h1>
                 <ul>
                     <span className={`${openSans.className} inline-flex items-center mb-2`}>
@@ -43,7 +43,7 @@ export default function Features() {
                 <Button>Fler funktioner</Button>
             </section>
             <Image 
-                className="bg-center bg-none rounded-lg overflow-hidden"
+                className="bg-center bg-none rounded-lg overflow-hidden intersect-once intersect:motion-opacity-in-0 intersect:motion-translate-x-in-100"
                 src={CoreFeaturesImage}
                 alt="Core features"
                 width={520}

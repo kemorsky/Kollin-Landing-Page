@@ -1,3 +1,5 @@
+import ObserverProvider from './ObserverProvider';
+
 import { MainNav } from "@/components/ui/header";
 import { Footer } from "@/components/ui/footer";
 
@@ -13,20 +15,22 @@ import Courses from "@/components/Courses";
 
 export default function Home() {
   return (
-    <div className="xl:w-[80rem] bg-slate-100 m-auto scroll-smooth">
-      <main className="flex flex-col items-center justify-center gap-28">
-        <MainNav />
-        <Hero />
-        <WhatWeDo />
-        <Stats />
-        <Usps />
-        <Features />
-        <Prices />
-        <Testimonials />
-        <Courses />
-        <FAQ />
-        <Footer />
-      </main>
-    </div>
+    <ObserverProvider>
+      <div className="xl:w-[80rem] bg-slate-100 m-auto scroll-smooth">
+        <main className="flex flex-col items-center justify-center gap-36">
+          <MainNav />
+          <Hero />
+          <WhatWeDo />
+          <Stats />
+          <Usps />
+          <Features />
+          <Prices />
+          <Testimonials />
+          <Courses />
+          <FAQ />
+          <Footer />
+        </main>
+      </div>
+    </ObserverProvider>
   );
 }
