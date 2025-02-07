@@ -16,7 +16,7 @@ import Courses from "@/components/Courses";
 export default function Home() {
   return (
     <ObserverProvider>
-      <div className="xl:w-[80rem] bg-slate-100 m-auto scroll-smooth">
+      <div className="max-w-[80rem] min-h-screen bg-slate-100 m-auto !scroll-smooth">
         <main className="flex flex-col items-center justify-center gap-36">
           <MainNav />
           <Hero />

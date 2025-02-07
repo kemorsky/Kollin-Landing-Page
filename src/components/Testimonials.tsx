@@ -6,8 +6,6 @@ import Image from "next/image"
 import { ArrowLeft } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 
-import { poppins, openSans } from "@/app/fonts/fonts";
-
 import { Button } from "./ui/button"
 import { type CarouselApi } from "@/components/ui/carousel"
 import {
@@ -45,8 +43,8 @@ export default function Testimonials() {
 
     return (
         <div className="flex flex-col items-center gap-6 px-16 w-full">
-            <h1 className={`${poppins.className} text-4xl self-start font-semibold`}>Vad andra studenter säger</h1>
-            <Carousel setApi={setApi} className={`${openSans.className} w-[72rem] bg-white rounded-xl`}>
+            <h1 className='font-[Poppins] text-4xl self-start font-semibold'>Vad andra studenter säger</h1>
+            <Carousel setApi={setApi} className='w-[72rem] bg-white rounded-xl'>
                 <div className="flex flex-col items-start justify-center px-4">
                     <div className="flex items-center justify-between w-[48%]">
                     <div className="text-blue-500">

@@ -14,7 +14,6 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import { poppins, openSans } from "@/app/fonts/fonts";
 
 import { Star } from "lucide-react";
 
@@ -24,11 +23,11 @@ import Kurs1 from '../app/assets/courses/kurs1.svg'
 export default function Courses() {
     return (
         <div className="flex flex-col gap-12">
-            <div className="flex flex-col items-center gap-4">
-                <h1 className={`${poppins.className} text-4xl font-semibold`}>Exempel på kurser</h1>
-                <p className={`${openSans.className}`}>Slipp all tidskrävande administration. Med Kollin organiseras och struktureras kursernas <br />
+            <div className="flex flex-col items-center justify-center gap-4">
+                <h1 className="font-[Poppins] text-4xl font-semibold">Exempel på kurser</h1>
+                <p>Slipp all tidskrävande administration. Med Kollin organiseras och struktureras kursernas <br />
                 upplägg åt dig, så att du kan fokusera helt på inlärning och tentaförberedelser.</p>
-                <section className="space-x-4">
+                <section className="inline-flex items-center gap-4">
                     <Button>Kom igång</Button>
                     <Button variant="secondary">Kurskatalog</Button>
                 </section>
@@ -47,7 +46,7 @@ export default function Courses() {
                                 />
                             </CardContent>
                             <CardHeader>
-                                <CardTitle className={`${poppins.className} text-xl inline-flex items-center`}>
+                                <CardTitle className="font-[Poppins] text-xl inline-flex items-center">
                                     <Image
                                         className="mr-2"
                                         alt="Lollin Logo"
@@ -79,7 +78,7 @@ export default function Courses() {
                                 />
                             </CardContent>
                             <CardHeader>
-                                <CardTitle className={`${poppins.className} text-xl inline-flex items-center`}>
+                                <CardTitle className="font-[Poppins] text-xl inline-flex items-center">
                                     <Image
                                         className="cursor-pointer mr-2"
                                         alt="Lollin Logo"
@@ -111,7 +110,7 @@ export default function Courses() {
                                 />
                             </CardContent>
                             <CardHeader>
-                                <CardTitle className={`${poppins.className} text-xl inline-flex items-center`}>
+                                <CardTitle className="font-[Poppins] text-xl inline-flex items-center">
                                     <Image
                                         className="cursor-pointer mr-2"
                                         alt="Lollin Logo"
@@ -143,7 +142,7 @@ export default function Courses() {
                                 />
                             </CardContent>
                             <CardHeader>
-                                <CardTitle className={`${poppins.className} text-xl inline-flex items-center`}>
+                                <CardTitle className="font-[Poppins] text-xl inline-flex items-center">
                                     <Image
                                         className="cursor-pointer mr-2"
                                         alt="Lollin Logo"
@@ -175,7 +174,7 @@ export default function Courses() {
                                 />
                             </CardContent>
                             <CardHeader>
-                                <CardTitle className={`${poppins.className} text-xl inline-flex items-center`}>
+                                <CardTitle className="font-[Poppins] text-xl inline-flex items-center">
                                     <Image
                                         className="cursor-pointer mr-2"
                                         alt="Lollin Logo"
