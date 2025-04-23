@@ -21,7 +21,7 @@ export default function WhatWeDo() {
         <div className="md:p-4 w-full intersect-once intersect:motion-opacity-in-0 intersect:motion-translate-y-in-100">
             <div className="flex flex-col items-center justify-center gap-12">
                 <section className="flex flex-col md:flex-row items-center justify-around gap-6 w-full p-4">
-                    <Carousel className="w-[22rem] md:w-[30rem]"
+                    <Carousel className="w-[22rem] h-full sm:w-[25rem] md:w-[30rem]"
                                 plugins={[
                                     Autoplay({
                                     delay: 2000,    

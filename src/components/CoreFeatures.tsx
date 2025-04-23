@@ -6,8 +6,8 @@ import CoreFeaturesImage from '../app/assets/core-features-photo.jpg'
 
 export default function Features() {
     return (
-        <div className="flex justify-around items-center px-10">
-            <section className="w-[50%] inline-flex flex-col items-start justify-start gap-2 intersect-once intersect:motion-opacity-in-0 intersect:motion-translate-x-in-[-100%]">
+        <div className="inline-flex flex-col-reverse md:flex-row justify-center md:justify-around items-center gap-5 px-10">
+            <section className="w-full max-w-[40rem] inline-flex flex-col items-start justify-start gap-2 intersect-once intersect:motion-opacity-in-0 intersect:motion-translate-x-in-[-100%]">
                 <h1 className="font-[Poppins] text-4xl mb-4 font-semibold">Nyckelfunktioner</h1>
                 <ul>
                     <span className="inline-flex items-center mb-2">

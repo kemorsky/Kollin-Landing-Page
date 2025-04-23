@@ -11,7 +11,7 @@ import { UploadCloud } from 'lucide-react';
 export default function Usps() {
     return (
         <div className="flex flex-col items-center gap-6 w-full intersect-once intersect:motion-opacity-in-0 intersect:motion-translate-y-in-100">
-            <h1 className="font-[Poppins] text-4xl font-semibold">Vad du får med Kollin</h1>
+            <h1 className="font-[Poppins] text-3xl md:text-4xl font-semibold">Vad du får med Kollin</h1>
             <div className="flex items-center flex-wrap justify-center gap-4 md:gap-6 w-[85%]">
                 <Card className="border border-blue-500 rounded-xl w-[240px]">
                     <CardHeader>
